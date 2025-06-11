@@ -1,0 +1,7 @@
+{
+  "name": "FwebAuth",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
