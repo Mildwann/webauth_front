@@ -21,7 +21,9 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "@capacitor/android": "7.3.0",
     "@capacitor/app": "7.0.1",
+    "@capacitor/browser": "^7.0.1",
     "@capacitor/core": "7.3.0",
     "@capacitor/haptics": "7.0.1",
     "@capacitor/keyboard": "7.0.1",
@@ -31,6 +33,7 @@
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "ua-parser-js": "^2.0.3",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {

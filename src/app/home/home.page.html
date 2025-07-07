@@ -1,19 +1,40 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>WebAuthn</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content class="ion-padding">
-  <ion-item>
-    <ion-input
-      [(ngModel)]="username"
-      placeholder="Enter username"
-    ></ion-input>
-  </ion-item>
+  <div id="container">
+    <div class="login-box">
+      <h1 class="agent-login-title">WebAuthn</h1>
+      <p class="login-subtitle">Enter your details to register</p>
 
-  <ion-button expand="block" (click)="register()">Register</ion-button>
-  <ion-button expand="block" color="success" (click)="login()">Login</ion-button>
+      <ion-item class="login-input-item">
+        <ion-input
+          [(ngModel)]="username"
+          placeholder="username"
+        ></ion-input>
+      </ion-item>
 
-  <p>{{ message }}</p>
+      <ion-item class="login-input-item">
+        <ion-input
+          [(ngModel)]="password"
+          type="password"
+          placeholder="password"
+        ></ion-input>
+        </ion-item>
+
+      <ion-button expand="block" class="sign-in-button" (click)="registerUser()">Register</ion-button>
+
+      <div class="webauthn-actions-separator">
+        <hr class="or-line">
+        <span class="or-text">Or</span>
+        <hr class="or-line">
+      </div>
+
+      <div class="webauthn-actions">
+        <ion-button expand="block" fill="outline" class="webauthn-button" (click)="loginPassword()">Login with Password</ion-button>
+        <ion-button expand="block" fill="outline" class="webauthn-button" (click)="loginPasskey()">Login with Passkey</ion-button>
+        <ion-button *ngIf="loggedIn" expand="block" fill="outline" class="webauthn-button-add" (click)="addPasskey()">Add Passkey</ion-button>
+      </div>
+
+      <p class="message">{{ message }}</p>
+    </div>
+  </div>
 </ion-content>
